@@ -38,7 +38,7 @@ public class PaymentController {
         map.put(BaseMessageConst.MSG_INF_RESOURCE_CREATED, messageSource.getMessage(BaseMessageConst.MSG_INF_RESOURCE_CREATED, new String[]{"abc"}, LocaleContextHolder.getLocale()));
         map.put(BaseMessageConst.MSG_INF_RESOURCE_UPDATED, messageSource.getMessage(BaseMessageConst.MSG_INF_RESOURCE_UPDATED, new String[]{"abc"}, LocaleContextHolder.getLocale()));
         map.put(BaseMessageConst.MSG_ERR_RESOURCE_EXISTED, messageSource.getMessage(BaseMessageConst.MSG_ERR_RESOURCE_EXISTED, new String[]{"abc"}, LocaleContextHolder.getLocale()));
-        map.put(ZoneOffset.UTC.getId(), LocalDateTime.now(ZoneOffset.UTC.normalized()).truncatedTo(ChronoUnit.MICROS).toString());
+        map.put(ZoneOffset.UTC.getId(), LocalDateTime.now(ZoneOffset.UTC).truncatedTo(ChronoUnit.MICROS).toString());
         return ResponseEntity.ok(map);
     }
 
