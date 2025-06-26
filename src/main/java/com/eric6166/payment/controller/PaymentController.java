@@ -28,7 +28,7 @@ public class PaymentController {
     @GetMapping("/ping")
     public ResponseEntity<String> ping() {
         log.info("ping");
-        return ResponseEntity.ok("pong");
+        return ResponseEntity.ok("pong payment-service-01");
     }
 
     @GetMapping("/test")
