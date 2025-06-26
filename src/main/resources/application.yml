@@ -1,12 +1,8 @@
 app:
   port: 5001
-  name: payment
-
-  version: v1
-
-  context-path: api/${app.name}/${app.version}
+#  name: payment
 
 server:
   port: ${app.port}
-  servlet:
-    context-path: /${app.context-path}
+#  servlet:
+#    context-path: /${app.name}
