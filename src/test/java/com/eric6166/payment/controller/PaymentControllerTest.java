@@ -12,7 +12,6 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 @WebMvcTest(PaymentController.class)
 class PaymentControllerTest {
 
-    private static final String PATH = "/payment";
     @Autowired
     private MockMvc mockMvc;
 
@@ -28,7 +27,7 @@ class PaymentControllerTest {
 
     @Test
     void ping() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.get(PATH + "/ping"))
+        mockMvc.perform(MockMvcRequestBuilders.get("/ping"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.content().string("pong"));
     }
